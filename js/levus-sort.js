@@ -8,10 +8,12 @@
   // елементи
   const items = document.querySelectorAll('#levus-items figure');
 
-  // перемикаємо
-  buttons[0].addEventListener('click', sortByName);
-  buttons[1].addEventListener('click', sortByPrice);
-  buttons[2].addEventListener('click', sortBySize);
+  // робимо перевірку і перемикаємо 
+  if(items !== null){
+    buttons[0].addEventListener('click', sortByName);
+    buttons[1].addEventListener('click', sortByPrice);
+    buttons[2].addEventListener('click', sortBySize);
+  }
 
   // 1 функція для всіх
   function sort(number) {
