@@ -12,19 +12,19 @@ const wrapper = $('#levus-items');
 const items = $('#levus-items figure');
 
 // перемикаємо
-buttons[0].addEventListenter('click', getName);
-buttons[1].addEventListenter('click', getPrice);
-buttons[2].addEventListenter('click', getSize);
+buttons[0].addEventListenter('click', sortByName);
+buttons[1].addEventListenter('click', sortByPrice);
+buttons[2].addEventListenter('click', sortBySize);
 
 // функції
-function getName(){
+function sortByName(){
 
 }
 
-function getPrice(){
+function sortByPrice(){
 
 }
 
-function getSize(){
+function sortBySize(){
 
 }
