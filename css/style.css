@@ -11,12 +11,12 @@ body {
   font-family: sans-serif;
 }
 
-#buttons {
+#levus-buttons {
   margin: 20px;
   text-align: center;
 }
 
-#buttons span{
+#levus-buttons span{
   cursor: pointer;
   color: maroon;
   text-transform: uppercase;
@@ -26,7 +26,7 @@ body {
   border: 1px solid maroon;
 }
 
-#items {
+#levus-items {
   margin: 20px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -34,61 +34,61 @@ body {
 }
 
 @media(max-width: 1040px){
-  #items {
+  #levus-items {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media(max-width: 991px){
-  #items {
+  #levus-items {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media(max-width: 776px){
-  #items {
+  #levus-items {
     grid-template-columns: repeat(3, 1fr);
   }  
 }
 
 @media(max-width: 500px){
-  #items {
+  #levus-items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media(max-width: 380px){
-  #items {
+  #levus-items {
     grid-template-columns: 1fr;
   }
 }
 
-#items>figure {
+#levus-items>figure {
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
   padding: 10px;
   background: ivory;
 }
 
-#items img {
+#levus-items img {
   width: 100%!important;
 }
 
-#items p {
+#levus-items p {
   margin: 5px 0;
   font-size: 14px;
 }
 
-#items p:nth-of-type(1)::before {
+#levus-items p:nth-of-type(1)::before {
   content: 'name: ';
   font-size: 12px;
   font-style: italic;
 }
-#items p:nth-of-type(2)::before {
+#levus-items p:nth-of-type(2)::before {
   content: 'price: ';
   font-size: 12px;
   font-style: italic;
 }
-#items p:nth-of-type(3)::before {
+#levus-items p:nth-of-type(3)::before {
   content: 'size: ';
   font-size: 12px;
   font-style: italic;

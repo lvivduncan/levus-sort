@@ -3,28 +3,43 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 // кнопки перемикання
-const buttons = $('#levus-buttons span');
+const buttons = $$('#levus-buttons span');
 
 // основний блок з елементами
 const wrapper = $('#levus-items');
 
 // елементи
-const items = $('#levus-items figure');
+const items = $$('#levus-items figure');
 
 // перемикаємо
-buttons[0].addEventListenter('click', sortByName);
-buttons[1].addEventListenter('click', sortByPrice);
-buttons[2].addEventListenter('click', sortBySize);
+buttons[0].addEventListener('click', sortByName);
+buttons[1].addEventListener('click', sortByPrice);
+buttons[2].addEventListener('click', sortBySize);
 
-// функції
-function sortByName(){
+// сортуємо по імені
+function sortByName() {
+  const values = [];
+  items.forEach(item => {
+    values.push(item.dataset.item.split(',')[0]);
+  });
+
+  values.sort();
+
+  items.forEach((item, i) => {
+    values.forEach((val,num) => {
+      if(val == item.dataset.item.split(',')[0]) {
+        item.style.order = values.indexOf(values[num])
+      }
+    });
+  });
+}
+
+// сортуємо за ціною
+function sortByPrice() {
 
 }
 
-function sortByPrice(){
-
-}
-
-function sortBySize(){
+// сортуємо за розміром
+function sortBySize() {
 
 }
