@@ -9,7 +9,7 @@
   const items = document.querySelectorAll('#levus-items figure');
 
   // робимо перевірку і перемикаємо 
-  if(items !== null){
+  if (items !== null) {
     buttons[0].addEventListener('click', sortByName);
     buttons[1].addEventListener('click', sortByPrice);
     buttons[2].addEventListener('click', sortBySize);
@@ -21,7 +21,9 @@
 
     items.forEach(item => values.push(item.dataset.item.split(',')[number]));
 
-    values.sort();
+    // string or number
+    if(isNaN(+values[0])) values.sort();
+    else values.sort((a, b) => a - b);
 
     items.forEach(item => {
       values.forEach((val, num) => {
