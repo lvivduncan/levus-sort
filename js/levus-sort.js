@@ -2,9 +2,6 @@
   // кнопки перемикання
   const buttons = document.querySelectorAll('#levus-buttons span');
 
-  // основний блок з елементами
-  const wrapper = document.querySelector('#levus-items');
-
   // елементи
   const items = document.querySelectorAll('#levus-items figure');
 
