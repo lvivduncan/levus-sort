@@ -6,7 +6,7 @@
   const items = document.querySelectorAll('#levus-items figure');
 
   // робимо перевірку і перемикаємо 
-  if (items !== null) {
+  if (buttons.length > 0) {
     buttons[0].addEventListener('click', sortByName);
     buttons[1].addEventListener('click', sortByPrice);
     buttons[2].addEventListener('click', sortBySize);
