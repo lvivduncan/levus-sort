@@ -19,8 +19,7 @@
     items.forEach(item => values.push(item.dataset.item.split(',')[number]));
 
     // string or number
-    if(isNaN(+values[0])) values.sort();
-    else values.sort((a, b) => a - b);
+    isNaN(+values[0]) ? values.sort() : values.sort((a, b) => a - b);
 
     items.forEach(item => {
       values.forEach((val, num) => {
