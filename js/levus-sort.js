@@ -22,13 +22,16 @@
     // string or number
     isNaN(+values[0]) ? values.sort() : values.sort((a, b) => a - b);
 
-    items.forEach(item => {
-      values.forEach((val, num) => {
-        if (val == item.dataset.item.split(',')[number]) {
-          item.style.order = values.indexOf(values[num]);
-        }
-      });
-    });
+    // items.forEach(item => {
+    //   values.forEach((val, num) => {
+    //     if (val == item.dataset.item.split(',')[number]) {
+    //       item.style.order = values.indexOf(values[num]);
+    //     }
+    //   });
+    // });
+
+    // задрот-мод =)
+    items.forEach(item => values.forEach((val, num) => val == item.dataset.item.split(',')[number] ? item.style.order = values.indexOf(values[num]) : null));
   }
 
   // сортуємо по імені
