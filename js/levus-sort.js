@@ -1,3 +1,4 @@
+// levus-sort 18-06-2020
 {
   // кнопки перемикання
   const buttons = document.querySelectorAll('#levus-buttons span');
