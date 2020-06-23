@@ -69,27 +69,24 @@ body {
   background: ivory;
 }
 
-#levus-items img {
-  width: 100%!important;
-}
-
 #levus-items p {
   margin: 5px 0;
   font-size: 14px;
 }
 
-#levus-items p:nth-of-type(1)::before {
-  content: 'name: ';
+#levus-items p:nth-of-type(1)::before,
+#levus-items p:nth-of-type(2)::before,
+#levus-items p:nth-of-type(3)::before {
   font-size: 12px;
   font-style: italic;
+}
+
+#levus-items p:nth-of-type(1)::before {
+  content: 'name: ';
 }
 #levus-items p:nth-of-type(2)::before {
   content: 'price: ';
-  font-size: 12px;
-  font-style: italic;
 }
 #levus-items p:nth-of-type(3)::before {
   content: 'size: ';
-  font-size: 12px;
-  font-style: italic;
 }
